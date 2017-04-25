@@ -21,6 +21,11 @@ class UrlsController < ApplicationController
 			render "new"
 		end
 	end
+	def destroy
+		@url = Url.find(params[:id])
+		@url.destroy
+		redirect_to urls_path
+	end
 
 	private
 	def url_params
