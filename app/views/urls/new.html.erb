@@ -1,0 +1,14 @@
+<h3>This is urls/new</h3>
+<% if @errors != nil %>
+	</br>
+  <ul>
+  <% @errors.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+  </br>
+<% end %>
+</br>
+
+<%= render "form" %>
+<%= link_to "Back", urls_path %>
